@@ -4,7 +4,7 @@ The code fellows asked us to Write a function to  takes in an array and a value 
 
 ## Whiteboard Process
 
-![Insert Shift Array Callenge](challenges/insertShiftArray/array-insert-shift.jpg)
+![Insert Shift Array Callenge](./array-insert-shift.jpg)
 
 ## Approach & Efficiency
 
