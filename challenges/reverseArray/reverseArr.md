@@ -4,7 +4,7 @@ The code fellows asked us to Write a function called reverseArray which takes an
 
 ## Whiteboard Process
 
-![Reverse Array Callenge](CC1.png)
+![Reverse Array Callenge](challenges/reverseArray/CC1.jpg)
 
 ## Approach & Efficiency
 
