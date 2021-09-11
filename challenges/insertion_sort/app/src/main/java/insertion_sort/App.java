@@ -14,13 +14,8 @@ public class App {
     public static void main(String[] args) {
         int[] arr = {8, 4, 23, 42, 16, 15};
         System.out.println(Arrays.toString(quickSort(arr,0,arr.length-1)));
-
-
-
-
-//        System.out.println(Arrays.toString(mergeSort(arr)));
-
-        //       System.out.println(Arrays.toString(insertionSort(arr)));
+        System.out.println(Arrays.toString(mergeSort(arr)));
+        System.out.println(Arrays.toString(insertionSort(arr)));
     }
 
     public static int[] insertionSort(int[] arr) {
