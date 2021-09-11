@@ -10,5 +10,21 @@ class AppTest {
     @Test void appHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+        HashTable test = new HashTable(10);
+
+        test.add("hi","test adding");
+        assertEquals(true ,test.contains("hi"));
+
+        assertEquals("test adding",test.get("hi"));
+        assertEquals(" Wrong Key",test.get("hello"));
+
+        test.add("c","one");
+        test.add(55,"two");
+        assertEquals("one",test.get("c"));
+        assertEquals("two",test.get(55));
+        assertEquals(9,test.hashTableStringKey ("hi"));
+
+
     }
 }
