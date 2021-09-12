@@ -9,8 +9,10 @@ Return: array
 
 ![hashmap-left-join](./hashmap-left-join.jpg)
 
+
 # Solution 
-use method as following 
+use method as following pic
 
 
-![solution](./solution.png)
+![solution](./solutionhash.png)
+
