@@ -4,27 +4,57 @@
 package hashtable;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
+    @Test
+    void appHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
 
 
         HashTable test = new HashTable(10);
 
-        test.add("hi","test adding");
-        assertEquals(true ,test.contains("hi"));
+        test.add("hi", "test adding");
+        assertEquals(true, test.contains("hi"));
 
-        assertEquals("test adding",test.get("hi"));
-        assertEquals(" Wrong Key",test.get("hello"));
+        assertEquals("test adding", test.get("hi"));
+        assertEquals(" Wrong Key", test.get("hello"));
 
-        test.add("c","one");
-        test.add(55,"two");
-        assertEquals("one",test.get("c"));
-        assertEquals("two",test.get(55));
-        assertEquals(9,test.hashTableStringKey ("hi"));
+        test.add("c", "one");
+        test.add(55, "two");
+        assertEquals("one", test.get("c"));
+        assertEquals("two", test.get(55));
+        assertEquals(9, test.hashTableStringKey("hi"));
 
     }
+
+
+//    ______________________________CC33______________________________
+
+    @Test void hashMap_left_join() {
+
+    Map<String, String> mapOne = new HashMap<>();
+    Map<String, String> mapTwo = new HashMap<>();
+
+        mapOne.put("fond","enamored");
+        mapOne.put("wrath","anger");
+        mapOne.put("diligent","employed");
+        mapOne.put("outfit","garb");
+        mapOne.put("guide","usher");
+
+        mapTwo.put("fond","averse");
+        mapTwo.put("wrath","delight");
+        mapTwo.put("diligent","idle");
+        mapTwo.put("guide","follow");
+        mapTwo.put("flow","jam");
+
+
+    assertEquals("{diligent=[employed, null], outfit=[garb, null], wrath=[anger, null], guide=[usher, null], fond=[enamored, null]}",HashTable.leftJoins(mapOne,mapTwo).toString());
+
+}
 }

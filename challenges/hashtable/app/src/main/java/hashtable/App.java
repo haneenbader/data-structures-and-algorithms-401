@@ -3,6 +3,11 @@
  */
 package hashtable;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -18,6 +23,26 @@ public class App {
         System.out.println(newHashTable.contains("test add method"));
 
 
+//    ______________________________CC33______________________________
+
+        Map<String, String> mapOne = new HashMap<>();
+        Map<String, String> mapTwo = new HashMap<>();
+
+        mapOne.put("fond","enamored");
+        mapOne.put("wrath","anger");
+        mapOne.put("diligent","employed");
+        mapOne.put("outfit","garb");
+        mapOne.put("guide","usher");
+
+        mapTwo.put("fond","averse");
+        mapTwo.put("wrath","delight");
+        mapTwo.put("diligent","idle");
+        mapTwo.put("guide","follow");
+        mapTwo.put("flow","jam");
+
+
+       System.out.print ( HashTable.leftJoins(mapOne,mapTwo).toString());
 
     }
+//
 }
