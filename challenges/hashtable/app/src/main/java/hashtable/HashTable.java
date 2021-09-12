@@ -1,5 +1,10 @@
 package hashtable;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class HashTable <T> {
 
     Node <T> [] hashTableArray;
@@ -91,4 +96,20 @@ public class HashTable <T> {
         }
         return  result;
     }
+
+//    ______________________________CC33______________________________
+
+    public static Map<String, List<String>> leftJoins(Map<String,String> mapOne, Map<String,String> mapTwo){
+        Map<String,List<String>> result=new HashMap<>();
+
+        mapOne.forEach((key,value)->{
+            result.put(key, Arrays.asList(value, mapTwo.getOrDefault(value, "null")));
+        });
+
+        return result;
+
+    }
+
+
+
 }
