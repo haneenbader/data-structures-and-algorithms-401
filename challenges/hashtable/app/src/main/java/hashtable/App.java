@@ -17,10 +17,12 @@ public class App {
         System.out.println(new App().getGreeting());
 
 
+
         HashTable newHashTable = new HashTable(7);
         newHashTable.add(0,"test add method");
         System.out.println(newHashTable.get(0));
         System.out.println(newHashTable.contains("test add method"));
+
 
 
 //    ______________________________CC33______________________________
@@ -43,6 +45,6 @@ public class App {
 
        System.out.print ( HashTable.leftJoins(mapOne,mapTwo).toString());
 
+
     }
-//
 }
