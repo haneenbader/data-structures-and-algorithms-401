@@ -6,6 +6,7 @@ package hashtable;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -36,25 +37,42 @@ class AppTest {
 
 //    ______________________________CC33______________________________
 
-    @Test void hashMap_left_join() {
+    @Test
+    void hashMap_left_join() {
 
-    Map<String, String> mapOne = new HashMap<>();
-    Map<String, String> mapTwo = new HashMap<>();
+        Map<String, String> mapOne = new HashMap<>();
+        Map<String, String> mapTwo = new HashMap<>();
 
-        mapOne.put("fond","enamored");
-        mapOne.put("wrath","anger");
-        mapOne.put("diligent","employed");
-        mapOne.put("outfit","garb");
-        mapOne.put("guide","usher");
+        mapOne.put("fond", "enamored");
+        mapOne.put("wrath", "anger");
+        mapOne.put("diligent", "employed");
+        mapOne.put("outfit", "garb");
+        mapOne.put("guide", "usher");
 
-        mapTwo.put("fond","averse");
-        mapTwo.put("wrath","delight");
-        mapTwo.put("diligent","idle");
-        mapTwo.put("guide","follow");
-        mapTwo.put("flow","jam");
+        mapTwo.put("fond", "averse");
+        mapTwo.put("wrath", "delight");
+        mapTwo.put("diligent", "idle");
+        mapTwo.put("guide", "follow");
+        mapTwo.put("flow", "jam");
 
 
-    assertEquals("{diligent=[employed, null], outfit=[garb, null], wrath=[anger, null], guide=[usher, null], fond=[enamored, null]}",HashTable.leftJoins(mapOne,mapTwo).toString());
+        assertEquals("{diligent=[employed, null], outfit=[garb, null], wrath=[anger, null], guide=[usher, null], fond=[enamored, null]}", HashTable.leftJoins(mapOne, mapTwo).toString());
 
-}
-}
+
+
+    }
+
+    //_______________________________________CC31______________________
+
+
+    @Test
+    void repeatedWord() {
+        HashRepet hash = new HashRepet();
+        String test = " Once upon a time , there was a brave princess who...";
+        assertEquals("a", hash.repeatedWord(test));
+
+
+        String tests = " It was a queer,sultry summer , the summer they electrocuted the Rosenbergs , and I didn’t know what I was doing in New York...";
+        assertEquals("summer", hash.repeatedWord(tests));
+    }
+    }

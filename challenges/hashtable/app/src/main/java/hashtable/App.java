@@ -23,7 +23,7 @@ public class App {
         System.out.println(newHashTable.contains("test add method"));
 
 
-//    ______________________________CC33______________________________
+////    ______________________________CC33______________________________
 
         Map<String, String> mapOne = new HashMap<>();
         Map<String, String> mapTwo = new HashMap<>();
@@ -43,6 +43,11 @@ public class App {
 
        System.out.print ( HashTable.leftJoins(mapOne,mapTwo).toString());
 
+
+//       _________________________________________CC31__________________
+
+        HashRepet hash = new HashRepet();
+        String test = " Once upon a time , there was a brave princess who...";
+        System.out.println( hash.repeatedWord(test));
     }
-//
 }
