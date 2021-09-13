@@ -13,14 +13,12 @@ class AppTest {
     @Test
     void appHasAGreeting() {
         App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
-//
-//        int[] arr = {8,4,23,42,16,15};
-//        int[] sortArr = {4,8,15,16,23,42};
-//
-//        assertEquals(Arrays.toString(sortArr),(Arrays.toString(insertionSort(arr));
+        Assertions.assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+        int[] arr = new int[]{8, 4, 23, 42, 16, 15};
+        int[] sortArr = new int[]{4, 8, 15, 16, 23, 42};
+        Assertions.assertEquals(Arrays.toString(sortArr), Arrays.toString(App.insertionSort(arr)));
+        Assertions.assertEquals(Arrays.toString(sortArr), Arrays.toString(App.mergeSort(arr)));
+        Assertions.assertEquals(Arrays.toString(sortArr), Arrays.toString(App.quickSort(arr, 0, sortArr.length - 1)));
     }
-
-
 
 }

@@ -17,13 +17,16 @@ public class App {
         System.out.println(new App().getGreeting());
 
 
+
         HashTable newHashTable = new HashTable(7);
         newHashTable.add(0,"test add method");
         System.out.println(newHashTable.get(0));
         System.out.println(newHashTable.contains("test add method"));
 
 
+
 ////    ______________________________CC33______________________________
+
 
         Map<String, String> mapOne = new HashMap<>();
         Map<String, String> mapTwo = new HashMap<>();
@@ -44,6 +47,7 @@ public class App {
        System.out.print ( HashTable.leftJoins(mapOne,mapTwo).toString());
 
 
+
 //       _________________________________________CC31__________________
 
         HashRepet hash = new HashRepet();
@@ -51,3 +55,4 @@ public class App {
         System.out.println( hash.repeatedWord(test));
     }
 }
+
