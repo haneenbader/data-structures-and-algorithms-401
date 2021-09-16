@@ -42,7 +42,7 @@ Should raise exception when called on empty stack
 ### is empty
 Arguments: none
 Returns: Boolean indicating whether or not the queue is empty
-
+--------------------------------------------------------------------
 ## codechallenge 11
 ### Create a new class called pseudo queue.
 Do not use an existing Queue.
@@ -57,7 +57,7 @@ Arguments: none
 Extracts a value from the PseudoQueue, using a first-in, first-out approach.
 ![pseudo queue](code11.PNG)
 
-
+----------------------------------------------------------------
 ## codechallenge 12
 ### Create a class called AnimalShelter which holds only dogs and cats.
 The shelter operates using a first-in, first-out approach.
