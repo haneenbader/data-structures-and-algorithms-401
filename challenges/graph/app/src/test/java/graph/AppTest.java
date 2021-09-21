@@ -20,7 +20,7 @@ class AppTest {
     @Test
     public void addNewVertex(){
         Graph graph = new Graph();
-        Node vertex = new Node("Ali");
+        Vertex vertex = new Vertex("Ali");
 
         assertEquals(vertex, graph.addVertex("Ali"));
     }
@@ -31,8 +31,8 @@ class AppTest {
         graph.addVertex("Osama");
         graph.addVertex("Ali");
         graph.addVertex("Ahmad");
-        List<Node> list= new ArrayList<>();
-        Node vertex=new Node("Ahmad");
+        List<Vertex> list= new ArrayList<>();
+        Vertex vertex=new Vertex("Ahmad");
         list.add(vertex);
 
         assertEquals(list , graph.addEdge("Osama" , "Ahmad") );
@@ -44,13 +44,15 @@ class AppTest {
         graph.addVertex("Osama");
         graph.addVertex("Omar");
 
-        Node v1 = new Node("Osama");
-        Node v2 = new Node("Omar");
-        Map<Node,  List<Node>> adjVertices = new HashMap<>();
+        Vertex v1 = new Vertex("Osama");
+        Vertex v2 = new Vertex("Omar");
+        Map<Vertex,  List<Vertex>>  adjVertices = new HashMap<>();
 
         adjVertices.putIfAbsent(v1, new ArrayList<>());
         adjVertices.putIfAbsent(v2, new ArrayList<>());
-
+//       graph.addEdge("Osama" , "Omar");
+//       adjVertices.get(v1).add(v2);
+//       adjVertices.get(v2).add(v1);
 
         assertEquals(adjVertices , graph.getAdjVertices());
     }
@@ -61,15 +63,15 @@ class AppTest {
         graph.addVertex("Osama");
         graph.addVertex("Omar");
 
-        Node v1 = new Node("Osama");
-        Node v2 = new Node("Omar");
-        Map<Node,  List<Node>>  adjVertices = new HashMap<>();
+        Vertex v1 = new Vertex("Osama");
+        Vertex v2 = new Vertex("Omar");
+        Map<Vertex,  List<Vertex>>  adjVertices = new HashMap<>();
 
         adjVertices.putIfAbsent(v1, new ArrayList<>());
         adjVertices.putIfAbsent(v2, new ArrayList<>());
         graph.addEdge("Osama" , "Omar");
 
-        List<Node> list = new ArrayList<>();
+        List<Vertex> list = new ArrayList<>();
         list.add(v2);
 
         assertEquals(list , graph.getNeighbors(v1));
@@ -97,12 +99,12 @@ class AppTest {
         graph.addEdge("Areen" , "Noor");
         graph.addEdge("Enas" , "Jawad");
 
-        Node vertex = new Node("Jawad");
-        Node vertex2 = new Node("Noor");
-        Node vertex3 = new Node("Enas");
-        Node vertex4 = new Node("Areen");
+        Vertex vertex = new Vertex("Jawad");
+        Vertex vertex2 = new Vertex("Noor");
+        Vertex vertex3 = new Vertex("Enas");
+        Vertex vertex4 = new Vertex("Areen");
 
-        List<Node> list= new ArrayList<>();
+        List<Vertex> list= new ArrayList<>();
         list.add(vertex);
         list.add(vertex2);
         list.add(vertex3);
@@ -146,6 +148,8 @@ class AppTest {
 
         assertEquals(15 , graph.citiesTrip(graph, list3));
 
+        List list4= new ArrayList();
+        list4.add("Qaed");
 
         assertEquals( 0, graph.citiesTrip(graph , list4));
     }
@@ -174,7 +178,7 @@ class AppTest {
         graph.addEdge("D" , "H", 30);
         graph.addEdge("D" , "F", 30);
 
-        Node vertex= new Node("A");
+        Vertex vertex= new Vertex("A");
 
         List list= new ArrayList();
         list.add("A");
@@ -190,7 +194,6 @@ class AppTest {
     }
 
     @Test
-
     public void depthFirst2(){
         Graph graph= new Graph();
         graph.addVertex("F");
@@ -204,7 +207,7 @@ class AppTest {
 
         List list= new ArrayList();
         list.add("R");
-        Node vertex1= new Node("R");
+        Vertex vertex1= new Vertex("R");
         assertEquals(list, graph.depthFirst(vertex1));
     }
 }
