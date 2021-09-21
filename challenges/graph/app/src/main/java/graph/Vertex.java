@@ -1,16 +1,14 @@
 package graph;
 
-import java.util.Objects;
-
-public class Node {
+public class Vertex {
     String label;
     public int weight;
 
-    Node(String label){
+    Vertex(String label){
         this.label = label;
     }
 
-    Node(String label, int weight){
+    Vertex(String label, int weight){
         this.label = label;
         this.weight = weight;
     }
@@ -19,7 +17,7 @@ public class Node {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Node vertex = (Node) o;
+        Vertex vertex = (Vertex) o;
         return Objects.equals(label, vertex.label);
     }
 
@@ -34,4 +32,5 @@ public class Node {
                 "label='" + label + '\'' +
                 '}';
     }
+
 }
