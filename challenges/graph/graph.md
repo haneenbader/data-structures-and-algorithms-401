@@ -27,12 +27,32 @@ Include the weight of the connection in the returned collection
 ### size
 Arguments: none
 Returns the total number of nodes in the graph
+ 
+# Approach & Efficiency
 
+    Big O of add Node
+        Time: O(1)
+        Space: O(n)
+    Big O of add Edge
+        Time: O(1)
+        Space: O(1)
+    Big O of get Nodes
+        Time: O(1)
+        Space: O(1)
+    Big O of get neighbors
+        Time: O(1)
+        Space: O(1)
+    Big O of size
+        Time: O(1)
+        Space: O(1)
 
 ## code challenge 36 
 ![breadfirst](code36.PNG)
+
 ## Implement a breadth-first traversal on a graph.
+
 ### Write the following method for the Graph class:
+
 breadth first
 Arguments: Node
 Return: A collection of nodes in the order they were visited.
@@ -40,13 +60,13 @@ Display the collection
 
 
 ## code challenge 37
-![city trip](code37.PNG)
+
 ### Write a function called business trip
 Arguments: graph, array of city names
 Return: cost or null
 
 ## code challenge 38
-![graph-depth-first](code38.PNG)
+
 ### Write the following method for the Graph class:
 
 depth first
