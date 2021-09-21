@@ -47,7 +47,7 @@ Returns the total number of nodes in the graph
         Space: O(1)
 
 ## code challenge 36 
-![breadfirst](code36.PNG)
+
 
 ## Implement a breadth-first traversal on a graph.
 
@@ -58,12 +58,16 @@ Arguments: Node
 Return: A collection of nodes in the order they were visited.
 Display the collection
 
+![breadthFirst](breadthFirst.png)
 
 ## code challenge 37
 
 ### Write a function called business trip
+
 Arguments: graph, array of city names
 Return: cost or null
+
+![graph-business-trip](graph-business-trip.png)
 
 ## code challenge 38
 
@@ -73,3 +77,6 @@ depth first
 Arguments: Node (Starting point of search)
 Return: A collection of nodes in their pre-order depth-first traversal order
 Display the collection
+
+
+![graph-depth-first](graph-depth-first.png)
